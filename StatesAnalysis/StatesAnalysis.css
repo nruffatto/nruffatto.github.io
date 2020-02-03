@@ -1,0 +1,33 @@
+
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: #ddd;
+}
+body{
+}
+p{padding:0;margin:0;}
+
+#wrap{
+	width: 70%;
+	margin: 0 auto;
+	border: 2px solid black;
+	padding: 5%;
+}
+
+header{
+	background-color: blue;
+}
+
+nav{
+	background-color: purple;
+}
+
+section{
+	background-color: red;
+	overflow:auto;
+}
+
+footer{
+	background-color: orange;
+}

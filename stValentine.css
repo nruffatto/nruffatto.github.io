@@ -11,7 +11,7 @@ html, body{
 	background-color: black;
 }
 body{
-	background-image:url(images/sVBasilica.jpg);
+	background-image:url(sVBasilica.jpg);
 	background-repeat:no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -55,7 +55,7 @@ nav a{
 	padding: 12px 30px;
 	text-decoration:none;
 	font-family:font1;
-	font-size:30px;
+	font-size:31px;
 }
 
 nav a:hover{

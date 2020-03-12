@@ -11,17 +11,17 @@ body{
 	background-image: url("images/spring01.jpg")
 }
 
-body #spring{
+body#spring{
 	background-image: url("images/spring01.jpg")
 }
 
-body #summer{
+body#summer{
 }
 
-body #autumn{
+body#autumn{
 }
 
-body #winter{
+body#winter{
 }
 
 p{padding:0;margin:0;}

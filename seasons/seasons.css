@@ -8,6 +8,7 @@ body{
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover;
+	background-image: url("images/spring01.jpg")
 }
 
 body #spring{

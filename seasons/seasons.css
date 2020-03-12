@@ -5,7 +5,24 @@ html, body{
 	background-color: #ddd;
 }
 body{
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
 }
+
+body #spring{
+	background-image: url("images/spring01.jpg")
+}
+
+body #summer{
+}
+
+body #autumn{
+}
+
+body #winter{
+}
+
 p{padding:0;margin:0;}
 
 #wrap{

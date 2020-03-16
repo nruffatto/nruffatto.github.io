@@ -1,27 +1,45 @@
 
+@font-face{
+	font-family: ruritania;
+	src:url(fonts/Ruritania.ttf);
+}
+@font-face{
+	font-family: ruritania-outline;
+	src:url(fonts/Ruritania-Outline.ttf);
+}
+
 html, body{
 	margin: 0;
 	padding: 0;
-	background-color: #ddd;
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
 }
 body{
 	background-position: center; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover;
-	background-image: url("images/spring01.jpg")
+	/* background-image: url(images/spring01.jpg) */
 }
 
-body#spring{
-	background-image: url("images/spring01.jpg")
+html#home{
+	background-image: url(images/clouds01.jpg)
 }
 
-body#summer{
+html#spring{
+	background-image: url(images/spring01.jpg)
 }
 
-body#autumn{
+html#summer{
+	background-image: url(images/summer01.jpg)
 }
 
-body#winter{
+html#autumn{
+	background-image: url(images/autumn01.jpg)
+}
+
+html#winter{
+	background-image: url(images/winter01.jpg)
 }
 
 p{padding:0;margin:0;}
@@ -29,23 +47,84 @@ p{padding:0;margin:0;}
 #wrap{
 	width: 70%;
 	margin: 0 auto;
-	border: 2px solid black;
+	/* border: 2px solid black; */
 	padding: 5%;
 }
 
+h1{
+	color: #9eb9e2;
+}
+
+p{
+	color: #002153;
+}
+
 header{
-	background-color: blue;
+	font-family: ruritania;
+	font-size:100px;
+	text-align: center;
+	color: #9eb9e2;
 }
 
 nav{
-	background-color: purple;
+	text-align: center;
+	padding:12px 0;
+	margin:50px auto;
+	top:0;
+	position:sticky;
 }
 
+nav a{
+	color: #002153;
+	padding: 12px 30px;
+	text-decoration:none;
+	font-family:ruritania;
+	font-size:50px;
+}
+
+nav a:hover{
+	color: #9eb9e2;
+}
+
+nav li{
+	display: inline;
+}
+
+nav ul{
+	margin:0;
+	padding:0;
+}
+
+
 section{
-	background-color: red;
-	overflow:auto;
+	margin: 0 auto;
+	width:50%;
+}
+
+section h1{
+	text-align: center;
+	background-color: rgba(0,0,0,.7);
+	font-size:30px;
+}
+
+section p{
+	font-size:20px;
+	position:center;
+	background-color: rgba(255,255,255,.7)
 }
 
 footer{
-	background-color: orange;
+	margin: auto;
+	width:50%;
+	margin-top: 100px;
+	margin-bottom: 0;
+	font-size:20px;
+	color: #002153;
+	text-align: center;
+	text-decoration: none;
+	background-color: rgba(255,255,255,.7)
+}
+footer a{
+	color: #002153;
+	text-decoration: none;
 }

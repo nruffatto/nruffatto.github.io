@@ -1,0 +1,85 @@
+
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: #ddd;
+}
+body{
+}
+p{padding:0;margin:0;}
+
+#wrap{
+	width: 70%;
+	margin: 0 auto;
+	border: 2px solid black;
+	padding: 5%;
+}
+
+header{
+	background-color: blue;
+}
+header:hover{
+	background-color:brown;
+}
+header h1:hover{
+	background-color: blue;
+}
+header h2:hover{
+	background-color: tan;
+	font-family:"papyrus";
+}
+
+nav{
+	background-color: purple;
+	margin:0;
+	text-align:center;
+	text-decoration:none;
+}
+nav:hover{
+	background-color:red;
+}
+nav li{
+	display:inline;
+	color:white;
+	text-decoration:none;
+}
+
+#imLink1{
+	background-image: url();
+}
+#imLink2{
+	background-image: url();
+}
+#imLink3{
+	background-image: url();
+}
+
+nav a{
+	color:lime;
+}
+
+nav a:hover{
+	color:white;
+	text-decoration:none;
+	font-family:"papyrus";
+}
+
+section{
+	background-color: white;
+	overflow:auto;
+	margin: 0 50px;
+	padding: 0 20%;
+}
+
+section:hover{
+	background-color: black;
+}
+
+section p:hover{
+	color:lime;
+	background-color:yellow;
+}
+
+footer{
+	background-color: orange;
+}

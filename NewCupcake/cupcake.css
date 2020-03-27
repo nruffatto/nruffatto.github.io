@@ -1,0 +1,36 @@
+
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color: #ddd;
+}
+body{
+}
+p{padding:0;margin:0;text-decoration:none;}
+
+#wrap{
+	width: 70%;
+	position:center;
+	margin: 0 auto;
+}
+
+header{
+	text-align: center;
+}
+
+nav{
+	background-color: purple;
+}
+
+nav a:hover{
+	
+}
+
+section{
+	background-color: red;
+	overflow:auto;
+}
+
+footer{
+	background-color: orange;
+}

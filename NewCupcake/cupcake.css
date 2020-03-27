@@ -2,24 +2,66 @@
 html, body{
 	margin: 0;
 	padding: 0;
-	background-color: #ddd;
+	background-color: #ccc;
 }
 body{
+	font-family:Verdana;
 }
 p{padding:0;margin:0;text-decoration:none;}
 
 #wrap{
-	width: 70%;
+	width: 65%;
 	position:center;
 	margin: 0 auto;
 }
 
+h1{
+	font-size:33px;
+}
+
 header{
 	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 0;
+	padding:0;
+	/* border: 2px solid black; */
+	overflow:auto;
+}
+
+header img{
+	width:100%
 }
 
 nav{
-	background-color: purple;
+	/* border: 0; */
+	padding:0;
+	margin-top:0;
+	background-color: #0ec8c7;
+	text-align:center;
+	overflow:auto;
+	font-size:16px;
+}
+
+nav li{
+	/* border: 2px solid black; */
+	/* background-color:red; */
+	padding:0;
+	margin:0 5%;
+	display: inline;
+	overflow:auto;
+}
+
+a{
+	/* border: 2px solid black; */
+	/* background-color:orange; */
+	padding: 0;
+	margin:0;
+	text-decoration:none;
+	overflow:auto;
+}
+
+nav a{
+	color:#fff;
 }
 
 nav a:hover{
@@ -27,10 +69,105 @@ nav a:hover{
 }
 
 section{
-	background-color: red;
+	background-color:#ec3632;
 	overflow:auto;
 }
 
+aside{
+	width: 23%;
+	float:left;
+	padding:10px 0;
+}
+
+aside ul{
+	list-style:none;
+}
+
+aside li{
+	margin:15px 0;
+}
+
+aside a{
+	text-decoration:none;
+	color:#fff;
+}
+
+article{
+	background-color:#fff;
+	width:72%;
+	display:inline;
+	float:right;
+	padding:2%;
+}
+
+article img{
+	float:right;
+	width:40%
+}
+
 footer{
-	background-color: orange;
+	padding:10px;
+	text-align:center;
+	font-size:12px;
+	background-color: #0ec8c7;
+}
+
+footer li{
+	margin:0 2%;
+	display:inline;
+}
+
+@media screen and (max-width: 900px){
+	body{
+	}
+	#wrap{
+		width:100%;
+	}
+	
+	header{
+		margin:0;
+	}
+	
+	nav li{
+		/* display:block; */
+	}
+	nav ul{
+		padding:0;
+		margin:0;
+	}
+	nav{
+		padding:0;
+	}
+	
+	section{
+		background-color:#fff;
+	}
+	
+	aside{
+		background-color:#ec3632;
+		width:100%
+	}
+	
+	aside li{
+		padding:2%;
+		display:inline;
+	}
+	
+	aside, article{
+		text-align:center;
+		display:block;
+		float:none;
+		width:98%
+	}
+	
+	article img{
+		margin:0 auto;
+		float:none;
+		display:block;
+	}
+	
+	.bird{
+		float:none;
+		width:100%;
+	}
 }

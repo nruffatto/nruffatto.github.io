@@ -7,9 +7,9 @@
 	#506C64
 	#77CBB9
 */
-@font-face{font-family: dash;src:url(fonts/dash.ttf);}
-@font-face{font-family: gregorian;src:url(fonts/gregorian.ttf);}
-@font-face{font-family: slant;src:url(/slant.ttf);}
+/* @font-face{font-family: dash;src:url(fonts/dash.ttf);} */
+/* @font-face{font-family: gregorian;src:url(fonts/gregorian.ttf);} */
+@font-face{font-family: slant;src:url('/slant.TTF');}
 
 html, body{
 	font-family:slant;

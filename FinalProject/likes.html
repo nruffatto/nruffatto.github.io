@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link href = "style.css" rel = "stylesheet" type = "text/css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160888708-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-160888708-1');
+		</script>
+	</head>
+	<body>
+		<script>
+			var numChannels = 2;
+			var channels = new Array(numChannels);
+			var index = 0;
+			for(i = 0; i < numChannels; i ++){
+				channels[i] = document.createElement('audio');
+				channels[index].setAttribute('id', 'audio_' + i.toString())
+				document.body.appendChild(channels[i]);
+				temp = document.createElement('source');
+				temp.src = 'audio/effects/headerClick_01.mp3';
+				channels[i].appendChild(temp);
+			}
+		</script>
+		<script>
+			<!-- function removeElement(elementId) { -->
+				<!-- // Removes an element from the document -->
+				<!-- var element = document.getElementById(elementId); -->
+				<!-- element.parentNode.removeChild(element); -->
+			<!-- } -->
+			function playNoise(id){
+				<!-- document.body.removeChild(channels[index].id); -->
+				channels[index] = document.createElement('audio');
+				channels[index].setAttribute('id', 'audio_' + index.toString());
+				document.body.appendChild(channels[index]);
+				temp = document.createElement('source');
+				temp.src = 'audio/effects/'+id+'.mp3';
+				channels[index].appendChild(temp);
+				channels[index].play();
+				index = (index + 1)%numChannels;
+			}
+		</script>
+	
+	<div id = "wrap">
+	<header>
+		<p id = "headerLetter_01" onclick = "playNoise(id);animate_01(id)" onmouseout = "unanimate_01(id)">N</p>
+		<p id = "headerLetter_02" onclick = "playNoise(id);animate_01(id)" onmouseout = "unanimate_01(id)">A</p>
+		<p id = "headerLetter_03" onclick = "playNoise(id);animate_01(id)" onmouseout = "unanimate_01(id)">T</p>
+		<p id = "headerLetter_04" onclick = "playNoise(id);animate_01(id)" onmouseout = "unanimate_01(id)">H</p>
+		<p id = "headerLetter_05" onclick = "playNoise(id);animate_01(id)" onmouseout = "unanimate_01(id)">A</p>
+		<p id = "headerLetter_06" onclick = "playNoise(id);animate_01(id)" onmouseout = "unanimate_01(id)">N</p>
+	</header>
+	
+	<p id="demo"></p>
+	
+	<script>
+		function animate_01(id){
+			document.getElementById(id).className = "animP";
+		}
+		function unanimate_01(id){
+			document.getElementById(id).className = "";
+		}
+	</script>
+	
+	<nav>
+		<ul>
+			<li><a id = "nav_01" href = "index.html" onmouseover = "playNoise(id)">TRACKS</a></li>
+			<li><a id = "nav_01" href = "remixes.html" onmouseover = "playNoise(id)">REMIXES</a></li>
+			<li><a id = "nav_01" href = "melodies.html" onmouseover = "playNoise(id)">MELODIES</a></li>
+			<li><a id = "nav_01" href = "sounds.html" onmouseover = "playNoise(id)">SOUNDS</a></li>
+			<li><a id = "nav_01" href = "likes.html" onmouseover = "playNoise(id)">LIKES</a></li>
+		</ul>
+	</nav>
+	
+	<section>
+		<script>
+			function expand(id){				
+				document.getElementById(id).classList.remove("hoverOff");
+				document.getElementById(id).classList.add("hoverOn");
+			}
+			function contract(id){
+				document.getElementById(id).classList.remove("hoverOn");
+				document.getElementById(id).classList.add("hoverOff");
+			}
+		</script>
+		
+		<!-- <script> -->
+			<!-- var number = '00'; -->
+			<!-- var playFilePath = "images/play.gif"; -->
+			<!-- var pauseFilePath = "images/pause.gif"; -->
+			<!-- function playPause(id){ -->
+				<!-- number = id.slice(15, 17); -->
+				<!-- var audioId = 'track_' + number; -->
+				<!-- var audio = document.getElementById(audioId); -->
+				<!-- if(audio.paused){ -->
+					<!-- audio.play(); -->
+					<!-- document.getElementById(id).src = pauseFilePath; -->
+				<!-- } else{ -->
+					<!-- audio.pause(); -->
+					<!-- document.getElementById(id).src = playFilePath; -->
+				<!-- } -->
+			<!-- } -->
+		
+		<!-- </script> -->
+		<p class = 'pageTitle'>LIKES</p>
+		<p class = 'pageDescription'>Below are some of the tracks from other
+		artists that have inspired and influenced me.</p>
+		
+		<ul>
+			<!-- <li> -->
+				<!-- <div class = 'customAudioPlayer' id = 'player_01' onmouseover = "expand(id)" onmouseout = "contract(id)"> -->
+					<!-- <span class = 'playPauseButton'> -->
+						<!-- <img class = 'playPauseImage' id = "playPauseImage_00" src = "images/play.gif" onclick = "playPause('playPauseImage_00')"> -->
+					<!-- </span> -->
+					<!-- <span class = 'timeInfo' id = 'timeInfo_00'> -->
+						<!-- - -->
+					<!-- </span> -->
+					<!-- <span class = 'progressBar' id = 'progressBar_00'> -->
+						<!-- _ -->
+						<!-- <span class = 'progressCursor' id = 'progressCursor_00'> -->
+							<!-- . -->
+						<!-- </span> -->
+					<!-- </span> -->
+				<!-- </div> -->
+			<!-- </li> -->
+			<li>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/115102487&color=%23e5c349&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/skrillex" title="Skrillex" target="_blank" style="color: #cccccc; text-decoration: none;">Skrillex</a> · <a href="https://soundcloud.com/skrillex/skrillex-alvin-risk-try-it" title="SKRILLEX + ALVIN RISK - TRY IT OUT (TRY HARDER MIX)" target="_blank" style="color: #cccccc; text-decoration: none;">SKRILLEX + ALVIN RISK - TRY IT OUT (TRY HARDER MIX)</a></div>
+			</li>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/90277195&color=%23e5c349&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/pegboardnerds" title="Pegboard Nerds" target="_blank" style="color: #cccccc; text-decoration: none;">Pegboard Nerds</a> · <a href="https://soundcloud.com/pegboardnerds/pegboard-nerds-tristam-razor-1" title="Pegboard Nerds & Tristam - Razor Sharp [OUT NOW]" target="_blank" style="color: #cccccc; text-decoration: none;">Pegboard Nerds & Tristam - Razor Sharp [OUT NOW]</a></div>
+			<li>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/237835639&color=%23e5c349&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/getterofficial" title="GETTER" target="_blank" style="color: #cccccc; text-decoration: none;">GETTER</a> · <a href="https://soundcloud.com/getterofficial/brillz-ghastly-hawt-getter-remix" title="Brillz & Ghastly - Hawt (Getter Remix)" target="_blank" style="color: #cccccc; text-decoration: none;">Brillz & Ghastly - Hawt (Getter Remix)</a></div>
+			</li>			
+			<li>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/224875896&color=%23e5c349&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/virtual-riot" title="Virtual Riot" target="_blank" style="color: #cccccc; text-decoration: none;">Virtual Riot</a> · <a href="https://soundcloud.com/virtual-riot/4-virtual-riot-time-stops-ft" title="Virtual Riot - Time Stops ft. Danyka Nadeau" target="_blank" style="color: #cccccc; text-decoration: none;">Virtual Riot - Time Stops ft. Danyka Nadeau</a></div>
+			</li>
+			<li>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/90837120&color=%23e5c349&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/knifepartyinc" title="Knife Party" target="_blank" style="color: #cccccc; text-decoration: none;">Knife Party</a> · <a href="https://soundcloud.com/knifepartyinc/knife-party-power-glove" title="Power Glove" target="_blank" style="color: #cccccc; text-decoration: none;">Power Glove</a></div>
+			</li>
+			<li>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/45719015&color=%23e5c349&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/skrillex" title="Skrillex" target="_blank" style="color: #cccccc; text-decoration: none;">Skrillex</a> · <a href="https://soundcloud.com/skrillex/skrillex-right-in" title="Skrillex - Right In" target="_blank" style="color: #cccccc; text-decoration: none;">Skrillex - Right In</a></div>
+			</li>
+			<li>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/36859235&color=%23e5c349&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/flux-pavilion" title="Flux Pavilion" target="_blank" style="color: #cccccc; text-decoration: none;">Flux Pavilion</a> · <a href="https://soundcloud.com/flux-pavilion/flux-pavilion-i-cant-stop" title="I Can't Stop" target="_blank" style="color: #cccccc; text-decoration: none;">I Can't Stop</a></div>
+			</li>
+			<li>
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/518263083&color=%23e5c349&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/virtual-riot" title="Virtual Riot" target="_blank" style="color: #cccccc; text-decoration: none;">Virtual Riot</a> · <a href="https://soundcloud.com/virtual-riot/pjvip" title="Virtual Riot - Preset Junkies VIP" target="_blank" style="color: #cccccc; text-decoration: none;">Virtual Riot - Preset Junkies VIP</a></div>
+			</li>
+			<li>
+				
+			</li>
+		</ul>
+	</section>
+	
+	<footer>
+		&copy; Nathan Ruffatto 2020
+	</footer>
+	
+	</div> <!-- Close wrap -->
+	
+	<script>
+		var tracks = document.getElementsByClassName("track");
+		var trackLabels = document.getElementsByClassName("trackLabel");
+		var height = tracks[0].offsetHeight * (54 / 62.4) * 0.8;
+		var topDist = (tracks[0].offsetHeight * (54 / 62.4) - height) / 2
+		var numTracks = tracks.length;
+		for(i = 0; i < numTracks; i++){
+			trackLabels[i].style.fontSize = height.toString() + "px";
+			trackLabels[i].style.top = topDist.toString() + "px";
+		}		
+	</script>
+
+	<!-- <script> -->
+		<!-- var updater = setInterval(displayProgress, 1000); -->
+		<!-- document.getElementById("demo").style.color = 'white'; -->
+		<!-- var audio = document.getElementById('track_00'); -->
+		<!-- function displayProgress() { -->
+		  <!-- var timeRatio = audio.currentTime / audio.duration; -->
+		  <!-- var barWidth = document.getElementById('progressBar_00').offsetWidth; -->
+		  <!-- document.getElementById('progressCursor_00').style.left = (timeRatio*100).toString() + '%'; -->
+		  <!-- document.getElementById("timeInfo_00").innerHTML = audio.currentTime.toString()+'/'+audio.duration.toString(); -->
+		<!-- } -->
+	<!-- </script> -->
+		
+		<!-- <script>  -->
+			<!-- var imageHeight = "50"; -->
+			<!-- var playPauseImages = document.getElementsByClassName('playPauseImage'); -->
+			<!-- var customAudioPlayer = document.getElementsByClassName('customAudioPlayer'); -->
+			<!-- var playPauseButton = document.getElementsByClassName('playPauseButton'); -->
+			<!-- var timeInfo = document.getElementsByClassName('timeInfo'); -->
+			<!-- var progressBar = document.getElementsByClassName('progressBar'); -->
+			<!-- var progressCursor = document.getElementsByClassName('progressCursor'); -->
+			<!-- for (i = 0; i < playPauseImages.length; i ++){ -->
+				<!-- playPauseImages[i].height = imageHeight; -->
+				<!-- customAudioPlayer[i].height = imageHeight; -->
+				<!-- playPauseButton[i].width = playPauseImages[i].width; -->
+			<!-- } -->
+		<!-- </script> -->
+	</body>
+</html>

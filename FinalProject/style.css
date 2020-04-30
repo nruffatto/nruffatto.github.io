@@ -1,0 +1,254 @@
+
+/* PALETTE
+
+	#000000
+	#C6F6FF
+	#0A122A
+	#506C64
+	#77CBB9
+*/
+@font-face{font-family: dash;src:url(fonts/dash.ttf);}
+@font-face{font-family: gregorian;src:url(fonts/gregorian.ttf);}
+@font-face{font-family: slant;src:url(fonts/slant.ttf);}
+
+html, body{
+	font-family:slant;
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+body{
+}
+p{padding:0;margin:0;text-decoration:none;}
+a{text-decoration:none;}
+
+audio{
+	/* display: none; */
+}
+
+#wrap{
+	width: 70%;
+	margin: 0 auto;
+	/* border: 5px solid #0A122A; */
+}
+
+header{
+	background-color:#000000;
+	text-align:center;
+}
+
+header p{
+	margin:0 3%;
+	color:#E5C349;
+	font-size:70px;
+	display:inline;
+	cursor:pointer;
+}
+
+header p:hover{
+	/* animation-name:header; */
+	/* animation-duration:0.5s; */
+}
+
+.animP{
+	animation-name:header;
+	animation-duration:0.5s;
+}
+
+@keyframes header {
+  0% {color: #E5C349;}
+  25% {color: #fff}
+  100% {color: #E5C349;}
+}
+
+nav{
+	background-color: #0A122A;
+	text-align:center;
+	overflow:auto;
+	/* top:0; */
+	/* position:sticky; */
+}
+
+nav ul{
+	margin:0;
+	padding:5px;
+}
+
+nav li{
+	display: inline;
+	margin:0 5%
+}
+
+nav a{
+	padding:5px 0;
+	font-size:22px;
+	text-decoration:none;
+	color:#C6F6FF
+}
+
+nav a:hover{
+	animation-name:navMenu;
+	animation-duration:1s;
+}
+
+@keyframes navMenu {
+  0% {color: #C6F6FF;}
+  50% {color: #E5C349;}
+  100% {color: #C6F6FF;}
+}
+
+section audio{
+	margin:0;
+	padding:0;
+	display:block;
+	width:50%;
+	margin:0;
+	color:#E5C349;
+}
+
+.track.hoverOn{
+	width:100%;
+	animation-name:expand;
+	animation-duration:2s;
+}
+
+.track.hoverOff{
+	width:50%;
+	animation-name:contract;
+	animation-duration:2s;
+}
+
+@keyframes expand {
+  0% {width: 50%;}
+  100% {width: 100%;}
+}
+
+@keyframes contract {
+  0% {width: 100%;}
+  100% {width: 50%;}
+}
+
+section{
+	background-color: #000;
+	text-align:center;
+	padding:0;
+	overflow:auto;
+}
+
+section ul{
+	width:50%;
+	color:black;
+	list-style:none;
+	margin:0 auto;
+	padding:0;
+	/* border: 2px solid white; */
+}
+
+section li{
+	/* background-color:black; */
+	background: rgb(0,0,0);
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(10,18,42,1) 100%);
+	position:relative;
+	margin:10% auto;
+	/* border: 2px solid yellow; */
+}
+
+p.trackLabel{
+	position: absolute;
+	right:10px;
+	color:#638189;
+	/* color:#E5C349; */
+}
+
+footer{
+	background-color: #0A122A;
+	color:#C6F6FF;
+	text-align:center;
+}
+
+p.pageTitle{
+	color: #E5C349;
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(10,18,42,1) 100%);
+	padding-top:10px;
+	margin:0 auto;
+	font-size: 40px;
+}
+
+p.pageDescription{
+	color: #638189;
+	/* width:50%; */
+	background: rgb(0,0,0);
+	background: linear-gradient(180deg, rgba(10,18,42,1) 0%, rgba(0,0,0,1) 100%);
+	margin:0 auto;
+	padding:10px 25%;
+	font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 900px){
+	section ul{
+		width: 100%;
+	}
+	
+	p.pageDescription{
+		width: 100%;
+		padding:10px 0;
+	}
+}
+
+@media screen and (max-width: 700px){
+	header p{
+		margin:0 0;
+	}
+}
+
+
+
+
+div.customAudioPlayer{
+	position:relative;
+	width:50%;
+	/* background-color:#fff; */
+	overflow:auto;
+}
+
+span.playPauseButton{
+	/* position: absolute; */
+	width: 10%;
+	background-color:#fff;
+	/* left:0; */
+	float:left;
+}
+
+img.playPauseImage{
+	position: relative;
+	margin:auto;
+	/* background-color:purple; */
+}
+
+span.timeInfo{
+	position:absolute;
+	left:10%;
+	width: 10%;
+	color:#fff;
+	/* background-color:yellow; */
+}
+
+span.progressBar{
+	position:absolute;
+	right:0;
+	width: 80%;
+	height:100%;
+	/* background-color:#000; */
+}
+
+span.progressCursor{
+	position:absolute;
+	width: 2%;
+	height:100%;
+	background-color:#FFF;
+	color:white;
+	left: 0;
+}
